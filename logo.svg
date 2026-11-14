@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#0b172a" />
+      <stop offset="60%" stop-color="#070c18" />
+      <stop offset="100%" stop-color="#05080F" />
+    </radialGradient>
+
+    <!-- Electric Blue Gradient -->
+    <linearGradient id="electricBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#00A8FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Metallic Silver Chrome Gradient -->
+    <linearGradient id="metallicChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="25%" stop-color="#E2E8F0" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="75%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#64748B" />
+    </linearGradient>
+
+    <!-- Metallic Dark Silver Gradient -->
+    <linearGradient id="metallicDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94A3B8" />
+      <stop offset="50%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- Gold Accent for Boss details -->
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+  </defs>
+
+  <!-- Obsidian Black Background -->
+  <rect width="512" height="512" rx="90" fill="url(#bgGlow)" />
+  <rect width="508" height="508" x="2" y="2" rx="88" fill="none" stroke="#00A8FF" stroke-width="2.5" stroke-opacity="0.35" />
+
+  <!-- Ambient Glow Behind Falcon -->
+  <circle cx="256" cy="240" r="140" fill="#00A8FF" opacity="0.12" filter="url(#softGlow)" />
+
+  <!-- Outer Tech Hexagon / Ring subtle accents -->
+  <polygon points="256,40 430,140 430,340 256,440 82,340 82,140" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-opacity="0.1" stroke-dasharray="8 6" />
+
+  <!-- Code Bracket: Left < -->
+  <path d="M 125 180 L 65 245 L 125 310 L 105 325 L 35 245 L 105 165 Z"
+        fill="url(#electricBlue)"
+        filter="url(#neonGlow)" />
+  
+  <!-- Code Bracket: Right > -->
+  <path d="M 387 180 L 447 245 L 387 310 L 407 325 L 477 245 L 407 165 Z"
+        fill="url(#electricBlue)"
+        filter="url(#neonGlow)" />
+
+  <!-- Central Emblem: Stylized Aerodynamic Metallic Falcon with Wings & Geometry -->
+  <g id="falcon-emblem" transform="translate(0, -10)">
+    <!-- Falcon Wings - Left Main Wing -->
+    <path d="M 256 160 C 235 150 185 140 120 170 C 145 190 175 200 205 205 C 160 215 130 235 110 260 C 140 265 170 265 200 260 C 160 280 145 305 135 330 C 170 320 205 305 235 285 C 245 280 252 270 256 260 Z"
+          fill="url(#metallicChrome)"
+          stroke="#00E5FF"
+          stroke-width="1.5"
+          stroke-opacity="0.6" />
+
+    <!-- Falcon Wings - Right Main Wing -->
+    <path d="M 256 160 C 277 150 327 140 392 170 C 367 190 337 200 307 205 C 352 215 382 235 402 260 C 372 265 342 265 312 260 C 352 280 367 305 377 330 C 342 320 307 305 277 285 C 267 280 260 270 256 260 Z"
+          fill="url(#metallicChrome)"
+          stroke="#00E5FF"
+          stroke-width="1.5"
+          stroke-opacity="0.6" />
+
+    <!-- Left Wing Inner Layer (Layered Depth) -->
+    <path d="M 256 200 C 230 190 190 195 150 215 C 175 225 205 230 230 232 C 190 245 170 265 155 285 C 185 280 215 270 245 255 Z"
+          fill="url(#metallicDark)"
+          opacity="0.85" />
+
+    <!-- Right Wing Inner Layer -->
+    <path d="M 256 200 C 282 190 322 195 362 215 C 337 225 307 230 282 232 C 322 245 342 265 357 285 C 327 280 297 270 267 255 Z"
+          fill="url(#metallicDark)"
+          opacity="0.85" />
+
+    <!-- Falcon Head & Crest (Metallic Silver Crown) -->
+    <path d="M 256 95 
+             C 246 112 242 125 240 142 
+             C 248 138 256 136 265 137 
+             C 255 145 248 155 246 168 
+             C 254 162 262 160 270 162 
+             C 260 172 254 185 252 200 
+             L 256 215 
+             L 260 200 
+             C 258 185 252 172 242 162
+             C 250 160 258 162 266 168
+             C 264 155 257 145 247 137
+             C 256 136 264 138 272 142
+             C 270 125 266 112 256 95 Z"
+          fill="url(#metallicChrome)" />
+
+    <!-- Falcon Sharp Geometric Head Center -->
+    <polygon points="256,105 240,150 256,180 272,150" fill="url(#metallicChrome)" stroke="#00E5FF" stroke-width="2" />
+
+    <!-- Sharp Beak -->
+    <polygon points="256,180 248,160 256,145 264,160" fill="#E2E8F0" />
+    <polygon points="256,180 251,195 256,225 261,195" fill="url(#electricBlue)" filter="url(#neonGlow)" />
+
+    <!-- Fierce Electric Eyes -->
+    <circle cx="249" cy="155" r="3.5" fill="#00E5FF" filter="url(#neonGlow)" />
+    <circle cx="263" cy="155" r="3.5" fill="#00E5FF" filter="url(#neonGlow)" />
+    <circle cx="249" cy="155" r="1.5" fill="#FFFFFF" />
+    <circle cx="263" cy="155" r="1.5" fill="#FFFFFF" />
+
+    <!-- Tech Circuit Lines flowing down from falcon chest -->
+    <path d="M 256 230 L 256 280 L 240 295 L 240 320" fill="none" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.8" />
+    <path d="M 256 230 L 256 280 L 272 295 L 272 320" fill="none" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.8" />
+    <circle cx="240" cy="320" r="3" fill="#00E5FF" filter="url(#neonGlow)" />
+    <circle cx="272" cy="320" r="3" fill="#00E5FF" filter="url(#neonGlow)" />
+    <circle cx="256" cy="275" r="2.5" fill="#FFFFFF" />
+    <circle cx="256" cy="250" r="2" fill="#00E5FF" />
+  </g>
+
+  <!-- Typography: FALCON LOGIC -->
+  <text x="256" y="405" 
+        text-anchor="middle" 
+        font-family="'Space Grotesk', 'Montserrat', 'Segoe UI', sans-serif" 
+        font-size="36" 
+        font-weight="900" 
+        letter-spacing="7" 
+        fill="url(#metallicChrome)">FALCON LOGIC</text>
+
+  <!-- Sub-label: CODE & CREATIVE -->
+  <text x="256" y="435" 
+        text-anchor="middle" 
+        font-family="'Space Grotesk', 'Inter', sans-serif" 
+        font-size="14" 
+        font-weight="700" 
+        letter-spacing="5" 
+        fill="#00E5FF" 
+        opacity="0.95">FULL-STACK &amp; DESIGN</text>
+
+  <!-- Small Dot Separators -->
+  <circle cx="160" cy="431" r="2.5" fill="#E2E8F0" opacity="0.6" />
+  <circle cx="352" cy="431" r="2.5" fill="#E2E8F0" opacity="0.6" />
+</svg>

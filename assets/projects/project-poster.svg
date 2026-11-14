@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="nebulaGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="40%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    <filter id="p4glow">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#nebulaGrad)" />
+  <g fill="#FFFFFF" opacity="0.6">
+    <circle cx="100" cy="80" r="1.5" /><circle cx="240" cy="140" r="2" />
+    <circle cx="700" cy="110" r="1.5" /><circle cx="620" cy="380" r="2" />
+    <circle cx="150" cy="420" r="1.5" /><circle cx="480" cy="70" r="2" />
+  </g>
+  <path d="M 320 250 C 260 180 200 240 180 320 C 160 400 260 440 320 380 Z" fill="#00E5FF" opacity="0.3" filter="url(#p4glow)" />
+  <path d="M 480 250 C 540 180 600 240 620 320 C 640 400 540 440 480 380 Z" fill="#ec4899" opacity="0.3" filter="url(#p4glow)" />
+  
+  <rect x="360" y="140" width="80" height="220" rx="16" fill="#111827" stroke="#00E5FF" stroke-width="2.5" />
+  <rect x="375" y="130" width="50" height="15" rx="4" fill="#E2E8F0" />
+  <text x="400" y="240" text-anchor="middle" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="900" transform="rotate(-90 400 240)" letter-spacing="4">NOVA PULSE</text>
+  <polygon points="400,280 390,300 402,300 398,320 410,295 398,295" fill="#F59E0B" filter="url(#p4glow)" />
+
+  <text x="400" y="420" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" letter-spacing="6">UNLEASH THE COSMOS</text>
+  <text x="400" y="450" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="bold" fill="#00E5FF" letter-spacing="3">COMMERCIAL ADVERTISING KEY VISUAL</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="neonG1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <filter id="fGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#neonG1)" />
+  <circle cx="400" cy="200" r="160" fill="#ec4899" opacity="0.25" filter="url(#fGlow)" />
+  <circle cx="200" cy="150" r="120" fill="#06b6d4" opacity="0.25" filter="url(#fGlow)" />
+  <g stroke="#00E5FF" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="0" y1="390" x2="800" y2="390" />
+    <line x1="0" y1="430" x2="800" y2="430" />
+    <line x1="0" y1="480" x2="800" y2="480" />
+    <line x1="400" y1="340" x2="100" y2="500" />
+    <line x1="400" y1="340" x2="250" y2="500" />
+    <line x1="400" y1="340" x2="400" y2="500" />
+    <line x1="400" y1="340" x2="550" y2="500" />
+    <line x1="400" y1="340" x2="700" y2="500" />
+  </g>
+  <path d="M 220 330 C 260 290 340 280 430 280 C 520 280 570 300 620 330 L 650 365 L 180 365 Z" fill="#0f172a" stroke="#00E5FF" stroke-width="2" />
+  <polygon points="320,290 380,290 480,290 440,320 280,320" fill="#00E5FF" opacity="0.4" filter="url(#fGlow)" />
+  <circle cx="270" cy="365" r="30" fill="#020617" stroke="#00E5FF" stroke-width="4" filter="url(#fGlow)" />
+  <circle cx="560" cy="365" r="30" fill="#020617" stroke="#ec4899" stroke-width="4" filter="url(#fGlow)" />
+  <text x="400" y="180" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" letter-spacing="8" filter="url(#fGlow)">NEO-TOKYO 2099</text>
+  <text x="400" y="215" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="bold" fill="#00E5FF" letter-spacing="4">SURREAL PHOTO COMPOSITING</text>
+</svg>

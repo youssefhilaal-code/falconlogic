@@ -1,0 +1,325 @@
+/* ==========================================================================
+   FALCON LOGIC - Official Stylesheet (falconlogic.tech)
+   Obsidian Black (#05080F), Dark Slate (#0D1322), Electric Blue (#00A8FF/#00E5FF)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap');
+
+/* CSS Variables */
+:root {
+  --font-en-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-en-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-ar: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif;
+  
+  --bg-primary: #05080F;
+  --bg-secondary: #0D1322;
+  --bg-card: rgba(13, 19, 34, 0.75);
+  --bg-glass: rgba(13, 19, 34, 0.65);
+  --border-subtle: rgba(226, 232, 240, 0.08);
+  --border-glow: rgba(0, 168, 255, 0.35);
+  
+  --color-blue: #00A8FF;
+  --color-cyan: #00E5FF;
+  --color-silver: #E2E8F0;
+  --color-muted: #94A3B8;
+  --color-text: #F8FAFC;
+  
+  --glow-electric: 0 0 25px rgba(0, 168, 255, 0.35);
+  --glow-cyan: 0 0 30px rgba(0, 229, 255, 0.45);
+}
+
+/* Light Theme Variables */
+html[data-theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(241, 245, 249, 0.85);
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-glow: rgba(2, 132, 199, 0.4);
+  
+  --color-blue: #0284C7;
+  --color-cyan: #0369A1;
+  --color-silver: #334155;
+  --color-muted: #64748B;
+  --color-text: #0F172A;
+  
+  --glow-electric: 0 4px 20px rgba(2, 132, 199, 0.18);
+  --glow-cyan: 0 4px 25px rgba(2, 132, 199, 0.25);
+}
+
+/* Global resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-en-body);
+  background-color: var(--bg-primary);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+html[lang="ar"], [dir="rtl"] {
+  font-family: var(--font-ar);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--color-text);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-nav {
+  background: rgba(5, 8, 15, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+html[data-theme="light"] .glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.glow-blue {
+  box-shadow: var(--glow-electric);
+}
+
+.glow-cyan {
+  box-shadow: var(--glow-cyan);
+}
+
+.glow-hover:hover {
+  box-shadow: var(--glow-cyan);
+  border-color: var(--border-glow);
+}
+
+/* Falcon Electric Gradient Text */
+.text-falcon-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 35%, #00E5FF 70%, #00A8FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="light"] .text-falcon-gradient {
+  background: linear-gradient(135deg, #0F172A 0%, #0369A1 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyan-gradient {
+  background: linear-gradient(135deg, #00E5FF 0%, #00A8FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Preloader Keyframes */
+@keyframes falconPulse {
+  0% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 25px rgba(0, 229, 255, 0);
+  }
+  100% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+  }
+}
+
+.preloader-pulse {
+  animation: falconPulse 1.2s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* Before / After Slider Styles */
+.ba-slider-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 520px;
+  overflow: hidden;
+  user-select: none;
+  border-radius: 1rem;
+}
+
+.ba-slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.ba-slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #00E5FF, #00A8FF, #FFFFFF);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+  cursor: ew-resize;
+  z-index: 20;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #05080F;
+  border: 2px solid #00E5FF;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00E5FF;
+  font-size: 14px;
+}
+
+/* Stealth Boss Button */
+#boss-btn {
+  display: none;
+  animation: bossPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes bossPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.boss-gold-border {
+  border: 2px solid #F59E0B;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+/* Live Editing Mode Visual Marker */
+.live-editable-active [data-editable="true"] {
+  outline: 2px dashed #00E5FF !important;
+  outline-offset: 3px;
+  cursor: text !important;
+  transition: background-color 0.2s;
+}
+
+.live-editable-active [data-editable="true"]:hover {
+  background-color: rgba(0, 229, 255, 0.08) !important;
+}
+
+/* Toast Notification */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast-message {
+  pointer-events: auto;
+  min-width: 300px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #0D1322;
+  border: 1px solid #00E5FF;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 229, 255, 0.35);
+  color: #F8FAFC;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: toastSlideUp 0.3s ease-out forwards;
+}
+
+@keyframes toastSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RTL layout helpers */
+[dir="rtl"] .ltr-only {
+  direction: ltr;
+}
+
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Modal styles */
+.modal-backdrop {
+  background: rgba(3, 6, 12, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Custom focus ring */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #00E5FF !important;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.4) !important;
+}

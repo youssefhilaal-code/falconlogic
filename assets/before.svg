@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a4049" />
+      <stop offset="50%" stop-color="#2a3038" />
+      <stop offset="100%" stop-color="#1f2328" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="650" fill="url(#rawGrad)" />
+  
+  <g opacity="0.15" stroke="#ffffff" stroke-width="0.5">
+    <line x1="200" y1="0" x2="200" y2="650" />
+    <line x1="500" y1="0" x2="500" y2="650" />
+    <line x1="800" y1="0" x2="800" y2="650" />
+    <line x1="0" y1="200" x2="1000" y2="200" />
+    <line x1="0" y1="450" x2="1000" y2="450" />
+  </g>
+
+  <polygon points="150,650 350,250 550,650" fill="#2d333b" opacity="0.6" />
+  <polygon points="450,650 700,200 950,650" fill="#24292f" opacity="0.7" />
+
+  <g transform="translate(360, 120)">
+    <ellipse cx="140" cy="110" rx="65" ry="80" fill="#60666d" />
+    <path d="M 60 170 C 90 90 190 90 220 170 L 250 350 L 30 350 Z" fill="#4d535b" />
+    <path d="M 10 320 C 50 240 230 240 270 320 L 310 530 L -30 530 Z" fill="#3b4047" />
+    <ellipse cx="120" cy="110" rx="7" ry="4" fill="#3a3e44" />
+    <ellipse cx="160" cy="110" rx="7" ry="4" fill="#3a3e44" />
+    <rect x="135" y="115" width="10" height="25" rx="3" fill="#3a3e44" />
+    <line x1="125" y1="155" x2="155" y2="155" stroke="#3a3e44" stroke-width="3" />
+  </g>
+
+  <g fill="#9aa0a6" font-family="'Courier New', monospace" font-size="16">
+    <rect x="40" y="40" width="220" height="95" rx="8" fill="#1e2227" opacity="0.85" stroke="#444c56" stroke-width="1" />
+    <text x="55" y="70" font-weight="bold" fill="#adbac7">RAW CAPTURE (.CR3)</text>
+    <text x="55" y="92" font-size="13">ISO 1600 · 50mm · f/1.8</text>
+    <text x="55" y="112" font-size="13">Flat Profile · Uncorrected</text>
+  </g>
+
+  <rect x="40" y="580" width="160" height="35" rx="6" fill="#1e2227" opacity="0.8" />
+  <text x="55" y="603" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#adbac7">RAW / BEFORE</text>
+</svg>
